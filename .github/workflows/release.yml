@@ -1,0 +1,21 @@
+name: Release
+
+on:
+  workflow_dispatch:
+  workflow_call:
+  push:
+    paths:
+      - config/**
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Generate Repo File
+        run: python3 generate_repo.py
+      - name: Commit Repo File
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: mappings-reflexadapt.json
