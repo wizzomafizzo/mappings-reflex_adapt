@@ -1,0 +1,60 @@
+{
+    "db_id": "misteraddons/mappings-reflexadapt",
+    "timestamp": 1692080204,
+    "files": {
+        "config/inputs/SMS_input_2341_8036_RZordSms_v3.map": {
+            "hash": "5b14ee25ae1abcd268bfd2ec1c07befc",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/input_2341_8036_NES_SNES_to_USB_v3.map": {
+            "hash": "0fbf8a392f599305269392376fec350a",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/input_2341_8036_Sega_C=_to_USB_v3.map": {
+            "hash": "1f2ddab381f9ae4daa9883234063be71",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/input_2341_8037_NES_SNES_to_USB_v3.map": {
+            "hash": "0fbf8a392f599305269392376fec350a",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/input_2341_8036_MiSTer-A1_JogCon_v3.map": {
+            "hash": "1d52a8dfb6e8e77b65da5128bc737abf",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/input_2341_8037_Sega_C=_to_USB_v3.map": {
+            "hash": "71ccac39b296009a68f0905a856b298a",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/input_2341_8037_SATURN_to_USB_v3.map": {
+            "hash": "920754d2d7202b084f63debaffe997fb",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/input_2341_8036_SATURN_to_USB_v3.map": {
+            "hash": "920754d2d7202b084f63debaffe997fb",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/input_2341_8036_RZordSms_v3.map": {
+            "hash": "8ff391fb53a727baebe82b55e375dbf3",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/PSX_input_2341_8036_RZordPsGun_v3.map": {
+            "hash": "a9b44573254213fdfb3273d4d99ef493",
+            "size": 128,
+            "overwrite": false
+        }
+    },
+    "folders": {
+        "config/inputs/": {}
+    },
+    "base_files_url": "https://github.com/misteraddons/mappings-reflex_adapt/raw/main/"
+}
