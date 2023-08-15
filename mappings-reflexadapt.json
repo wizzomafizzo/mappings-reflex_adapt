@@ -1,0 +1,80 @@
+{
+    "db_id": "misteraddons/mappings-reflexadapt",
+    "timestamp": 1692140767,
+    "files": {
+        "config/inputs/SNES_input_16d0_127e_ReflexPSGun_v3.map": {
+            "hash": "9275a286e7dcfb98f24e68e246697cf7",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/forgottn_input_16d0_127e_MiSTer-A1_JogCon_v3.map": {
+            "hash": "b417c5b1713ed509fb215ae458421455",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/NES_input_16d0_127e_ReflexPSGun_v3.map": {
+            "hash": "00e3ec87a3d2b6e629c47f862b727f52",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/SMS_input_16d0_127e_ReflexPSGun_v3.map": {
+            "hash": "b97adcdd49dd1cef3e58fe5477863330",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "8817755ab94fd73b0862f26aabf9810d",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/PSX_input_16d0_127e_MiSTer-A1_JogCon_v3.map": {
+            "hash": "0903e3574df9155701da8b407ad74f0f",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/MegaCD_input_16d0_127e_ReflexPSGun_v3.map": {
+            "hash": "1be6dabca3f8d830f895cb28d7809303",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/Genesis_input_16d0_127e_ReflexPSGun_v3.map": {
+            "hash": "1be6dabca3f8d830f895cb28d7809303",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/input_16d0_127e_MiSTer-A1_JogCon_v3.map": {
+            "hash": "1a5b96ddcb5bf1389cdcf74ad08410b2",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/pzloop2_input_16d0_127e_MiSTer-A1_JogCon_v3.map": {
+            "hash": "0f62d072a6cd1282088702a9505f5b04",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/input_16d0_127e_ReflexPSWheel_v3.map": {
+            "hash": "abba7d022a0c1f83eef437a93e785251",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/ecofghtr_input_16d0_127e_MiSTer-A1_JogCon_v3.map": {
+            "hash": "2e530526f487fd1e0ee8997a0861fc2f",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/PSX_input_16d0_127e_ReflexPSGun_v3.map": {
+            "hash": "a9b44573254213fdfb3273d4d99ef493",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/PSX_input_16d0_127e_ReflexPSWheel_v3.map": {
+            "hash": "7f673066feebd0bdcd6ffcf9c98f0ba2",
+            "size": 128,
+            "overwrite": false
+        }
+    },
+    "folders": {
+        "config/inputs/": {}
+    },
+    "base_files_url": "https://github.com/misteraddons/mappings-reflex_adapt/raw/main/"
+}
