@@ -4,6 +4,7 @@ import os
 import json
 import hashlib
 import time
+from zipfile import ZipFile
 from typing import TypedDict, Union, Optional
 
 DB_FILE = "mappings-reflexadapt.json"
@@ -78,14 +79,20 @@ def generate_json(repo_db: RepoDb) -> str:
 def main():
     map_files: list[str] = []
 
+    # find all mapping files
     for subdir, _dirs, files in os.walk(MAPPINGS_DIR):
         for file in files:
             if file.endswith(MAPPING_SUFFIX):
                 map_files.append(os.path.join(subdir, file))
 
+    # create json repo db
     repo_db = create_repo_db(map_files)
     with open(DB_FILE, "w") as f:
         f.write(generate_json(repo_db))
+
+    # create a zip file containing json file
+    with ZipFile("{}.zip".format(DB_FILE), "w") as zf:
+        zf.write(DB_FILE)
 
 
 if __name__ == "__main__":
