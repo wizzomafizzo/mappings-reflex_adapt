@@ -18,4 +18,4 @@ jobs:
       - name: Commit Repo File
         uses: EndBug/add-and-commit@v9
         with:
-          add: mappings-reflexadapt.json
+          add: mappings-reflexadapt.json.zip
