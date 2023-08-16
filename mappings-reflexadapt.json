@@ -1,9 +1,34 @@
 {
     "db_id": "misteraddons/mappings-reflexadapt",
-    "timestamp": 1692140767,
+    "timestamp": 1692153370,
     "files": {
+        "config/inputs/TGFX16_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "f6ae9038fd73ec067e53660830eacad3",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/GameNWatch_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "64071677d07d373e6de9e5fc42de4141",
+            "size": 128,
+            "overwrite": false
+        },
         "config/inputs/SNES_input_16d0_127e_ReflexPSGun_v3.map": {
             "hash": "9275a286e7dcfb98f24e68e246697cf7",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/GBA_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "00ec4312a543c687f770fab620d57a45",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/GameGear_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "b21b1afb7816ed516286762dbbc59e97",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/Genesis_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "65da72e40bcb9e48bff311aa56931d58",
             "size": 128,
             "overwrite": false
         },
@@ -12,8 +37,18 @@
             "size": 128,
             "overwrite": false
         },
+        "config/inputs/input_16d0_127e_ReflexSat_v3.map": {
+            "hash": "231819f677bf2952c399e2e80cc7295f",
+            "size": 128,
+            "overwrite": false
+        },
         "config/inputs/NES_input_16d0_127e_ReflexPSGun_v3.map": {
             "hash": "00e3ec87a3d2b6e629c47f862b727f52",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/PSX_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "e8b9c748aaad9addcb9282203e5d0a92",
             "size": 128,
             "overwrite": false
         },
@@ -22,8 +57,38 @@
             "size": 128,
             "overwrite": false
         },
+        "config/inputs/GBC_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "fbaf2152b9e88e3254d9c41944707e23",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/GBA2P_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "05c92acb6c3b674768dd53836bcfb788",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/GAMEBOY_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "fbaf2152b9e88e3254d9c41944707e23",
+            "size": 128,
+            "overwrite": false
+        },
         "config/inputs/input_16d0_127e_ReflexPSDS1_v3.map": {
-            "hash": "8817755ab94fd73b0862f26aabf9810d",
+            "hash": "f1ed790c5b5601a7a7a6fc809a290c51",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/NES_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "a77cee85be33e958a8c372ff80dc4199",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/AtariLynx_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "ac4fbf658a3c8a4660646ded31a6a66f",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/SGB_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "8b75f575e2cfb542593e7e42e0a94980",
             "size": 128,
             "overwrite": false
         },
@@ -32,8 +97,28 @@
             "size": 128,
             "overwrite": false
         },
+        "config/inputs/SMS_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "b21b1afb7816ed516286762dbbc59e97",
+            "size": 128,
+            "overwrite": false
+        },
         "config/inputs/MegaCD_input_16d0_127e_ReflexPSGun_v3.map": {
             "hash": "1be6dabca3f8d830f895cb28d7809303",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/VECTREX_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "11d8c0fe980d013c0238c7ae1c45730f",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/input_16d0_127e_ReflexPSGun_v3.map": {
+            "hash": "6757c2c3a2f24638b5e64fbb52fc34c2",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/SNES_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "8b75f575e2cfb542593e7e42e0a94980",
             "size": 128,
             "overwrite": false
         },
@@ -47,6 +132,11 @@
             "size": 128,
             "overwrite": false
         },
+        "config/inputs/Atari2600_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "05bf799747e4dae7778fdf4f7fb15013",
+            "size": 128,
+            "overwrite": false
+        },
         "config/inputs/pzloop2_input_16d0_127e_MiSTer-A1_JogCon_v3.map": {
             "hash": "0f62d072a6cd1282088702a9505f5b04",
             "size": 128,
@@ -54,6 +144,11 @@
         },
         "config/inputs/input_16d0_127e_ReflexPSWheel_v3.map": {
             "hash": "abba7d022a0c1f83eef437a93e785251",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/GAMEBOY2P_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "834cdc4717fa52ca2fec32b131c44ef4",
             "size": 128,
             "overwrite": false
         },
@@ -67,8 +162,28 @@
             "size": 128,
             "overwrite": false
         },
+        "config/inputs/MegaCD_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "65da72e40bcb9e48bff311aa56931d58",
+            "size": 128,
+            "overwrite": false
+        },
         "config/inputs/PSX_input_16d0_127e_ReflexPSWheel_v3.map": {
             "hash": "7f673066feebd0bdcd6ffcf9c98f0ba2",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/S32X_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "65da72e40bcb9e48bff311aa56931d58",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/ATARI7800_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "c18c61d85cd96d242c791b01ad39896a",
+            "size": 128,
+            "overwrite": false
+        },
+        "config/inputs/NEOGEO_input_16d0_127e_ReflexPSDS1_v3.map": {
+            "hash": "973bb0ee76e68895b04179d905d3e7b6",
             "size": 128,
             "overwrite": false
         }
