@@ -45,7 +45,10 @@ class RepoDb(TypedDict):
 
 
 def create_repo_db(input_files: list[str]) -> RepoDb:
-    folders: RepoDbFolders = {"{}/".format(INPUTS_DIR): RepoDbFoldersItem(tags=None)}
+    folders: RepoDbFolders = {
+        "{}/".format(INPUTS_DIR): RepoDbFoldersItem(tags=None),
+        "Scripts/": RepoDbFoldersItem(tags=None),
+    }
 
     files: RepoDbFiles = {}
     for file in input_files:
@@ -55,6 +58,15 @@ def create_repo_db(input_files: list[str]) -> RepoDb:
         files[key] = RepoDbFilesItem(
             hash=md5, size=size, url=None, overwrite=False, reboot=None
         )
+
+    updater = RepoDbFilesItem(
+        hash=hashlib.md5(open("reflex_updater.sh", "rb").read()).hexdigest(),
+        size=os.stat("reflex_updater.sh").st_size,
+        url=DOWNLOAD_BASE_URL + "reflex_updater.sh",
+        overwrite=True,
+        reboot=None,
+    )
+    files["Scripts/reflex_updater.sh"] = updater
 
     return RepoDb(
         db_id=DB_ID,
