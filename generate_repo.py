@@ -13,9 +13,10 @@ DB_ID = "misteraddons/reflexadapt"
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 MAPPINGS_DIR = os.path.join(SCRIPT_DIR, "config", "inputs")
 MAPPING_SUFFIX = "_v3.map"
-CONFIG_DIR = os.path.join(SCRIPT_DIR, "config")
+CONFIGS_DIR = os.path.join(SCRIPT_DIR, "config")
 CONFIG_SUFFIX = ".cfg"
-INPUTS_DIR = "config/inputs"
+MISTER_INPUTS_DIR = "config/inputs"
+MISTER_CONFIGS_DIR = "config"
 DOWNLOAD_BASE_URL = "https://github.com/misteraddons/mappings-reflex_adapt/raw/main/"
 UPDATER_URL = "https://github.com/misteraddons/Reflex-Adapt/releases/download/{}/reflex_updater.sh"
 
@@ -48,13 +49,17 @@ class RepoDb(TypedDict):
 
 def create_repo_db(input_files: list[str], tag: str) -> RepoDb:
     folders: RepoDbFolders = {
-        "{}/".format(INPUTS_DIR): RepoDbFoldersItem(tags=None),
+        "{}/".format(MISTER_CONFIGS_DIR): RepoDbFoldersItem(tags=None),
+        "{}/".format(MISTER_INPUTS_DIR): RepoDbFoldersItem(tags=None),
         "Scripts/": RepoDbFoldersItem(tags=None),
     }
 
     files: RepoDbFiles = {}
     for file in input_files:
-        key = "{}/{}".format(INPUTS_DIR, os.path.basename(file))
+        if file.lower().endswith(CONFIG_SUFFIX):
+            key = "{}/{}".format(MISTER_CONFIGS_DIR, os.path.basename(file))
+        else:
+            key = "{}/{}".format(MISTER_INPUTS_DIR, os.path.basename(file))
         size = os.stat(file).st_size
         md5 = hashlib.md5(open(file, "rb").read()).hexdigest()
         files[key] = RepoDbFilesItem(
@@ -101,7 +106,7 @@ def main():
                 map_files.append(os.path.join(subdir, file))
 
     # find all config files
-    for subdir, _dirs, files in os.walk(CONFIG_DIR):
+    for subdir, _dirs, files in os.walk(CONFIGS_DIR):
         for file in files:
             if file.lower().endswith(CONFIG_SUFFIX):
                 map_files.append(os.path.join(subdir, file))
