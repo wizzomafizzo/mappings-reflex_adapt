@@ -3,17 +3,19 @@
 import os
 import json
 import hashlib
+import sys
 import time
 from zipfile import ZipFile
 from typing import TypedDict, Union, Optional
 
-DB_FILE = "mappings-reflexadapt.json"
-DB_ID = "misteraddons/mappings-reflexadapt"
+DB_FILE = "reflexadapt.json"
+DB_ID = "misteraddons/reflexadapt"
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 MAPPINGS_DIR = os.path.join(SCRIPT_DIR, "config", "inputs")
 MAPPING_SUFFIX = "_v3.map"
 INPUTS_DIR = "config/inputs"
 DOWNLOAD_BASE_URL = "https://github.com/misteraddons/mappings-reflex_adapt/raw/main/"
+UPDATER_URL = "https://github.com/misteraddons/Reflex-Adapt/releases/download/{}/reflex_updater.sh"
 
 # TODO: investigate the zips repo option
 
@@ -44,7 +46,7 @@ class RepoDb(TypedDict):
     base_files_url: Optional[str]
 
 
-def create_repo_db(input_files: list[str]) -> RepoDb:
+def create_repo_db(input_files: list[str], tag: str) -> RepoDb:
     folders: RepoDbFolders = {
         "{}/".format(INPUTS_DIR): RepoDbFoldersItem(tags=None),
         "Scripts/": RepoDbFoldersItem(tags=None),
@@ -62,8 +64,8 @@ def create_repo_db(input_files: list[str]) -> RepoDb:
     updater = RepoDbFilesItem(
         hash=hashlib.md5(open("reflex_updater.sh", "rb").read()).hexdigest(),
         size=os.stat("reflex_updater.sh").st_size,
-        url=DOWNLOAD_BASE_URL + "reflex_updater.sh",
-        overwrite=True,
+        url=UPDATER_URL.format(tag),
+        overwrite=None,
         reboot=None,
     )
     files["Scripts/reflex_updater.sh"] = updater
@@ -89,6 +91,7 @@ def generate_json(repo_db: RepoDb) -> str:
 
 
 def main():
+    tag = sys.argv[1]
     map_files: list[str] = []
 
     # find all mapping files
@@ -98,7 +101,7 @@ def main():
                 map_files.append(os.path.join(subdir, file))
 
     # create json repo db
-    repo_db = create_repo_db(map_files)
+    repo_db = create_repo_db(map_files, tag)
     with open(DB_FILE, "w") as f:
         f.write(generate_json(repo_db))
 

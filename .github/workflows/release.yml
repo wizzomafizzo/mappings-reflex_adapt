@@ -12,15 +12,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Get Latest Tag
+        id: previoustag
+        uses: "WyriHaximus/github-action-get-previous-tag@v1"
       - name: Fetch Reflex Updater
         uses: dsaltares/fetch-gh-release-asset@master
         with:
-          repo: 'misteraddons/Reflex-Adapt'
-          file: 'reflex_updater.sh'
+          repo: "misteraddons/Reflex-Adapt"
+          version: ${{ steps.previoustag.outputs.tag }}
+          file: "reflex_updater.sh"
       - name: Generate Repo File
-        run: python3 generate_repo.py
+        run: python3 generate_repo.py ${{ steps.previoustag.outputs.tag }}
       - name: Commit Repo File
         uses: EndBug/add-and-commit@v9
         with:
-          add: mappings-reflexadapt.json.zip reflex_updater.sh
+          add: reflexadapt.json.zip
