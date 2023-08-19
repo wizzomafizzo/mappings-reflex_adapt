@@ -17,8 +17,6 @@ INPUTS_DIR = "config/inputs"
 DOWNLOAD_BASE_URL = "https://github.com/misteraddons/mappings-reflex_adapt/raw/main/"
 UPDATER_URL = "https://github.com/misteraddons/Reflex-Adapt/releases/download/{}/reflex_updater.sh"
 
-# TODO: investigate the zips repo option
-
 
 class RepoDbFilesItem(TypedDict):
     hash: str
